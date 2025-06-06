@@ -1,0 +1,3 @@
+document.querySelector('.new-invoice').addEventListener('click', function() {
+  alert('Кликна на Нова фактура! Тука ќе се отвори формата за нова фактура.');
+});

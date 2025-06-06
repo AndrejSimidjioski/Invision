@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SaaS Фактурирање - Dashboard</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+  }
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  nav {
+    width: 220px;
+    background-color: #1e40af; /* темно сина */
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  nav h2 {
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-weight: normal;
+  }
+  nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+  }
+  nav a:hover {
+    background-color: #3b82f6; /* посветло сина */
+  }
+  main {
+    flex-grow: 1;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+  header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  button.new-invoice {
+    background-color: #3b82f6;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  button.new-invoice:hover {
+    background-color: #2563eb;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  }
+  th, td {
+    text-align: left;
+    padding: 14px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+    background-color: #2563eb;
+    color: white;
+  }
+  tr:hover {
+    background-color: #f1f5f9;
+  }
+  .btn-pdf {
+    background-color: #10b981; /* зелена */
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .btn-pdf:hover {
+    background-color: #059669;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <h2>Фактурирање</h2>
+      <a href="#">Почетна</a>
+      <a href="#">Фактури</a>
+      <a href="#">Клиенти</a>
+      <a href="#">Поставки</a>
+    </nav>
+    <main>
+      <header>
+        <button class="new-invoice">Нова фактура</button>
+      </header>
+      <table>
+        <thead>
+          <tr>
+            <th>Број на фактура</th>
+            <th>Клиент</th>
+            <th>Износ</th>
+            <th>Датум</th>
+            <th>Статус</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2025-001</td>
+            <td>Иван Иванов</td>
+            <td>12,000 MKD</td>
+            <td>01.06.2025</td>
+            <td>Исплатена</td>
+            <td><button class="btn-pdf">PDF</button></td>
+          </tr>
+          <tr>
+            <td>2025-002</td>
+            <td>Марија Петрова</td>
+            <td>5,500 MKD</td>
+            <td>03.06.2025</td>
+            <td>Несплатена</td>
+            <td><button class="btn-pdf">PDF</button></td>
+          </tr>
+          <tr>
+            <td>2025-003</td>
+            <td>Димитар Стојанов</td>
+            <td>8,750 MKD</td>
+            <td>05.06.2025</td>
+            <td>Исплатена</td>
+            <td><button class="btn-pdf">PDF</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
+</body>
+</html>
